@@ -1,0 +1,27 @@
+.grid-container {
+  display: grid;
+  grid-template-columns:auto;
+  grid-auto-rows:minmax(auto,auto);
+  grid-gap:10px;
+  padding-left:0;
+  padding-right: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.grid-item {
+  background-color: var(--wireframe-theme);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+@media(min-width:768px){
+  .grid-container {
+    padding: 10px;
+  }
+  .dial{
+    left:50px;
+  }
+  
+}
