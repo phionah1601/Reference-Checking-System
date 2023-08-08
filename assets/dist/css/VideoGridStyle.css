@@ -1,11 +1,17 @@
 .main-container {
   display: grid;
-  grid-template-columns:auto auto;
+  grid-template-columns:1fr 4fr;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns:auto auto;
-  grid-auto-rows:minmax(auto,auto);
-  grid-gap:5px;
+  grid-template-rows: auto auto;
+  grid-gap: 5px;
+}
+
+.grid-item {
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
 }
