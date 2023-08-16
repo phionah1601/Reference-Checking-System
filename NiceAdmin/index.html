@@ -942,7 +942,7 @@
           </div><!-- End Recent Activity -->
 
           <!-- Budget Report -->
-          <!--<div class="card">
+          <div class="card">
             <div class="filter">
               <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
               <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
@@ -957,7 +957,7 @@
             </div>
 
             <div class="card-body pb-0">
-              <h5 class="card-title">Budget Report <span>| This Month</span></h5>
+              <h5 class="card-title">Overall Reference Feedback<span>| This Month</span></h5>
 
               <div id="budgetChart" style="min-height: 400px;" class="echart"></div>
 
@@ -965,32 +965,32 @@
                 document.addEventListener("DOMContentLoaded", () => {
                   var budgetChart = echarts.init(document.querySelector("#budgetChart")).setOption({
                     legend: {
-                      data: ['Allocated Budget', 'Actual Spending']
+                      data: ['bakerTilly', 'KPMG']
                     },
                     radar: {
                       // shape: 'circle',
                       indicator: [{
-                          name: 'Sales',
+                          name: 'problem solving',
                           max: 6500
                         },
                         {
-                          name: 'Administration',
+                          name: 'leadership',
                           max: 16000
                         },
                         {
-                          name: 'Information Technology',
+                          name: 'communication skills',
                           max: 30000
                         },
                         {
-                          name: 'Customer Support',
+                          name: 'adaptability',
                           max: 38000
                         },
                         {
-                          name: 'Development',
+                          name: 'coding',
                           max: 52000
                         },
                         {
-                          name: 'Marketing',
+                          name: 'creativity',
                           max: 25000
                         }
                       ]
@@ -1000,11 +1000,11 @@
                       type: 'radar',
                       data: [{
                           value: [4200, 3000, 20000, 35000, 50000, 18000],
-                          name: 'Allocated Budget'
+                          name: 'bakerTilly'
                         },
                         {
                           value: [5000, 14000, 28000, 26000, 42000, 21000],
-                          name: 'Actual Spending'
+                          name: 'KPMG'
                         }
                       ]
                     }]
@@ -1013,10 +1013,10 @@
               </script>
 
             </div>
-          </div>--><!-- End Budget Report -->
+          </div><!-- End Budget Report -->
 
           <!-- Website Traffic -->
-          <div class="card">
+          <!--<div class="card">
             <div class="filter">
               <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
               <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
@@ -1091,10 +1091,10 @@
               </script>
 
             </div>
-          </div><!-- End Website Traffic -->
+          </div>--><!-- End Website Traffic -->
 
           <!-- News & Updates Traffic -->
-          <div class="card">
+          <!--<div class="card">
             <div class="filter">
               <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
               <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
@@ -1107,7 +1107,6 @@
                 <li><a class="dropdown-item" href="#">This Year</a></li>
               </ul>
             </div>
-
             <div class="card-body pb-0">
               <h5 class="card-title">News &amp; Updates <span>| Today</span></h5>
 
@@ -1142,12 +1141,12 @@
                   <p>Odit ut eveniet modi reiciendis. Atque cupiditate libero beatae dignissimos eius...</p>
                 </div>
 
-              </div><!-- End sidebar recent posts-->
+              </div>
 
             </div>
-          </div><!-- End News & Updates -->
+          </div>-->
 
-        </div><!-- End Right side columns -->
+        </div>
 
       </div>
     </section>
