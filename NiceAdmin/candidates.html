@@ -339,14 +339,7 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Data Tables</h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item">Tables</li>
-          <li class="breadcrumb-item active">Data</li>
-        </ol>
-      </nav>
+      
     </div><!-- End Page Title -->
 
     <section class="section" id="candidates-table">
@@ -355,9 +348,8 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Datatables</h5>
-              <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
-
+              <h5 class="card-title">Candidates</h5>
+              
               <!-- Table with stripped rows -->
               <table class="table datatable">
                 <thead>
@@ -366,7 +358,7 @@
                     <th scope="col">Name</th>
                     <th scope="col">Position</th>
                     <th scope="col">Age</th>
-                    <th scope="col">Start Date</th>
+                    <th scope="col">Application date</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -435,9 +427,57 @@
               </div>
             </div>
           </div>
+          <div class="card">
+            
+            <!--Filters-->
+            <div class="filter" style="padding: 10px;">
+              <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots" style="color: black;"></i></a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <li class="dropdown-header text-start">
+                  <h6>Filter</h6>
+                </li>
+                <!--top companies based on order in which candidates entered references-->
+                <li><a class="dropdown-item" href="#">creativity</a></li>
+                <li><a class="dropdown-item" href="#">attention to detail.</a></li>
+                <li><a class="dropdown-item" href="#"> ability to learn</a></li>
+                <li><a class="dropdown-item" href="#">leadership skills</a></li>
+                <li><a class="dropdown-item" href="#">communication skills</a></li>
+                
+              </ul>
+            </div>
+            <!---->
+            <div class="card-body">
+              <h5 class="card-title">
+                Reference Feedback 
+                <br> 
+                Sentiment Analysis
+                <br>
+                <span>creativity</span>
+              </h5>
 
+              <!-- Pie Chart -->
+              <div id="pieChart"></div>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new ApexCharts(document.querySelector("#pieChart"), {
+                    series: [44, 55, 13],
+                    chart: {
+                      height: 350,
+                      type: 'pie',
+                      toolbar: {
+                        show: true
+                      }
+                    },
+                    labels: ['Neutral', 'Positive', 'Negative']
+                  }).render();
+                });
+              </script>
+              <!-- End Pie Chart -->
+
+            </div>
+          </div>
         </div>
-
         <div class="col-xl-8">
 
           <div class="card">
@@ -464,23 +504,13 @@
                   </div>
 
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Company</div>
+                    <div class="col-lg-3 col-md-4 label">Current Company</div>
                     <div class="col-lg-9 col-md-8">Lueilwitz, Wisoky and Leuschke</div>
                   </div>
 
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Job</div>
+                    <div class="col-lg-3 col-md-4 label">Role</div>
                     <div class="col-lg-9 col-md-8">Web Designer</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Country</div>
-                    <div class="col-lg-9 col-md-8">USA</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Address</div>
-                    <div class="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022</div>
                   </div>
 
                   <div class="row">
@@ -680,6 +710,56 @@
             </div>
           </div>
 
+          <div class="card">
+            <!--Filters-->
+            <div class="filter" style="padding: 10px;">
+              <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots" style="color: black;"></i></a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <li class="dropdown-header text-start">
+                  <h6>Filter</h6>
+                </li>
+                <!--top companies based on order in which candidates entered references-->
+                <li><a class="dropdown-item" href="#">all companies</a></li>
+                <li><a class="dropdown-item" href="#">Top3</a></li>
+                <li><a class="dropdown-item" href="#">Top5</a></li>
+              </ul>
+            </div>
+            <!---->
+            <div class="card-body">
+              <h5 class="card-title">Comparative Analytics</h5>
+
+              <!-- Radar Chart -->
+              <div id="radarChart"></div>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new ApexCharts(document.querySelector("#radarChart"), {
+                    series: [{
+                      name: 'bakertilly',
+                      data: [80, 50, 30, 40, 100, 20],
+                    },
+                    {
+                      name: 'KPMG',
+                      data: [30, 100, 80, 40,50 , 20],
+                    },
+                    {
+                      name: 'EY',
+                      data: [10, 50, 30,40, 70, 40],
+                    }],
+                    chart: {
+                      height: 350,
+                      type: 'radar',
+                    },
+                    xaxis: {
+                      categories: ['problem-solving', 'effective under pressure', 'time management', 'effective communicator', 'creative', 'punctual']
+                    }
+                  }).render();
+                });
+              </script>
+              <!-- End Radar Chart -->
+
+            </div>
+          </div>
         </div>
       </div>
     </section>
